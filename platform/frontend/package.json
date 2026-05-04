@@ -1,0 +1,33 @@
+{
+  "name": "solar-strive-frontend",
+  "version": "1.0.0",
+  "description": "Solar Strive Frontend - Decentralized gig economy platform for solar marketing",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "type-check": "tsc --noEmit",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@arkade-os/sdk": "^0.4.22",
+    "@mapbox/mapbox-gl-geocoder": "^5.1.2",
+    "@types/node": "^25.6.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "mapbox-gl": "^3.23.0",
+    "next": "^16.2.4",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
+    "tailwindcss": "^4.2.4",
+    "typescript": "^6.0.3"
+  }
+}
