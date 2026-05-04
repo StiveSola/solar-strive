@@ -107,11 +107,20 @@ export default function InteractiveMapWithProspecting({
       return;
     }
 
+    // VA/MD/DC region bounds
+    const bounds = new mapboxgl.LngLatBounds(
+      [-79.5, 36.5], // Southwest coordinates (SW Virginia)
+      [-75.0, 39.7]  // Northeast coordinates (NE Maryland)
+    );
+
     map.current = new mapboxgl.Map({
       container: mapContainer.current,
       style: prospectingMode ? 'mapbox://styles/mapbox/satellite-streets-v12' : 'mapbox://styles/mapbox/light-v11',
-      center: userLocation || [-95.7129, 37.0902],
-      zoom: userLocation ? 12 : 4,
+      center: userLocation || [-77.0369, 38.9072], // DC as default center
+      zoom: userLocation ? 12 : 7,
+      maxBounds: bounds, // Restrict map to VA/MD/DC region
+      minZoom: 6,
+      maxZoom: 18,
       attributionControl: false
     });
 
